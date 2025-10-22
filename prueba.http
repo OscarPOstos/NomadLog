@@ -1,0 +1,19 @@
+### 🧍 Registro de usuario
+POST http://localhost:8000/api/auth/register/
+Content-Type: application/json
+
+{
+  "username": "viajero1",
+  "email": "viajero1@example.com",
+  "password": "password123"
+}
+
+
+### 🔑 Login de usuario
+POST http://localhost:8000/api/auth/login/
+Content-Type: application/json
+
+{
+  "username": "viajero1",
+  "password": "password123"
+}
