@@ -17,3 +17,27 @@ Content-Type: application/json
   "username": "viajero1",
   "password": "password123"
 }
+
+### Crear viaje (requiere token)
+POST http://localhost:8000/api/trips/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "title": "Aventura en Islandia",
+  "description": "Explorando los fiordos y cascadas.",
+  "location": "Reikiavik, Islandia",
+  "start_date": "2025-08-01",
+  "end_date": "2025-08-15",
+  "is_public": true
+}
+
+### Listar viajes públicos
+GET http://localhost:8000/api/trips/
+
+### Detalle de viaje
+GET http://localhost:8000/api/trips/1/
+
+### Eliminar viaje
+DELETE http://localhost:8000/api/trips/1/
+Authorization: Bearer {{access_token}}
