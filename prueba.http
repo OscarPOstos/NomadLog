@@ -41,3 +41,25 @@ GET http://localhost:8000/api/trips/1/
 ### Eliminar viaje
 DELETE http://localhost:8000/api/trips/1/
 Authorization: Bearer {{access_token}}
+
+### Crear entrada (requiere token)
+POST http://localhost:8000/api/trips/1/entries/
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "title": "Día 1 - Llegada a Reikiavik",
+  "content": "Llegué al aeropuerto y vi la aurora boreal por primera vez.",
+  "latitude": 64.1265,
+  "longitude": -21.8174
+}
+
+### Ver entradas del viaje
+GET http://localhost:8000/api/trips/1/entries/
+
+### Ver detalle de una entrada
+GET http://localhost:8000/api/entries/3/
+
+### Eliminar entrada
+DELETE http://localhost:8000/api/entries/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYxNjU5NDA1LCJpYXQiOjE3NjE2NTkxMDUsImp0aSI6IjljNmM3Y2RiMDc1MDQ2MmU5YjRmZGNlNjRjN2JmZmUwIiwidXNlcl9pZCI6IjEifQ.8GyPyfrpKOTALBiEm01PtOs8puQqTvhvpD35EaPto4k
