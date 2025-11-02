@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     # Apps locales
     'users',
     'trips',
-    'entries'
+    'entries',
+    'comments',
 ]
 
 MIDDLEWARE = [
